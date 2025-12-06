@@ -1,0 +1,8 @@
+com\pdfchatbox\controller\PdfController.class
+com\pdfchatbox\service\ChatService.class
+com\pdfchatbox\controller\ChatController.class
+com\pdfchatbox\model\ChatRequest.class
+com\pdfchatbox\model\StoredPdf.class
+com\pdfchatbox\service\PdfService.class
+com\pdfchatbox\model\ChatResponse.class
+com\pdfchatbox\PdfChatboxApplication.class
