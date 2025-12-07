@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+const API_BASE_URL =
+  process.env.REACT_APP_API_BASE_URL || "http://localhost:8080";
+
 function App() {
   // Upload-related state
   const [selectedFile, setSelectedFile] = useState(null);
@@ -36,7 +39,7 @@ function App() {
       const formData = new FormData();
       formData.append("file", selectedFile);
 
-      const response = await fetch("http://localhost:8080/api/pdf/upload", {
+      const response = await fetch(`${API_BASE_URL}/api/pdf/upload`, {
         method: "POST",
         body: formData,
       });
@@ -75,7 +78,7 @@ function App() {
     setChatError("");
 
     try {
-      const response = await fetch("http://localhost:8080/api/chat", {
+      const response = await fetch(`${API_BASE_URL}/api/chat`,{
         method: "POST",
         headers: {
           "Content-Type": "application/json",
